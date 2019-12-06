@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 
 export class Registration extends Component {
 
@@ -30,7 +31,8 @@ export class Registration extends Component {
         body: JSON.stringify({
           user: {
               name: this.state.userName
-          }
+          },
+          points: 0
         })
     })
     .then(response => (response.json()))
@@ -45,7 +47,7 @@ export class Registration extends Component {
     })
 
         event.preventDefault()
-
+        
 
     }
 

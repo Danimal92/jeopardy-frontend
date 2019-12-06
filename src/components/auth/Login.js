@@ -33,7 +33,7 @@ export class Login extends Component {
     render() {
         return  (
             
-            <div>{console.log("props inside of login", this.props.allUsers)}
+            <div>
             <h1>LOGIN</h1>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" name="userName" placeholder='username' value={this.state.userName} onChange={this.handleChange} required />

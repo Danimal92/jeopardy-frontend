@@ -1,3 +1,3 @@
-#README
+# README
 
 Jeopardy inspired trivia app

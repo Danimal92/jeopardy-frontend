@@ -6,24 +6,41 @@ import { Grid, Segment, Header } from 'semantic-ui-react'
 
 class Home extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
+    
+       state = {
+            login: true,
             user: {
                 id: null,
                 name: null,
                 points: null, 
-                rounds: []
+                rounds: [],
+                
 
             }
-        }
-
-        console.log("props",props)
+        
+        
+        
     }
 
     handleSuccessfulAuth = (data) => {
         this.props.handleRegistration(data)
     }
+
+    handleLoginHelper = () => {
+         
+
+        this.setState({login: false})
+
+    }
+
+    handleRegistrationHelper = () => {
+         
+
+        this.setState({login: true})
+
+    }
+
+    
 
     
     
@@ -31,9 +48,7 @@ class Home extends Component {
          return (
             <div>  
                 <Header textAlign='center' size='huge'>Home</Header>
-                <Header textAlign='left' size='huge'>Status: {this.props.loggedInStatus}</Header>
-                <Registration handleSuccessfulAuth={this.handleSuccessfulAuth}  />
-                <Login handleLogin={this.props.handleLogin} allUsers={this.props.allUsers} loggedInStatus={this.props.loggedInStatus}/>
+                {this.state.login ? <Login handleLoginHelper={this.handleLoginHelper} handleLogin={this.props.handleLogin} allUsers={this.props.allUsers} loggedInStatus={this.props.loggedInStatus}/> : <Registration handleRegistration={this.props.handleRegistration} handleRegistrationHelper={this.handleRegistrationHelper} handleSuccessfulAuth={this.handleSuccessfulAuth}  />  }
                 
             </div>
         ) 

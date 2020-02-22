@@ -13,7 +13,7 @@ export const ClueCard = (props) => {
         <>
         {console.log('clue card props:', props)}
         {props.clues.map((clue) => (
-            <Clue addPoints={props.addPoints} addQuestion={props.addQuestion} key={clue.id} clue={clue} />
+            <Clue updateUserRound={props.updateUserRound} addPoints={props.addPoints} addQuestion={props.addQuestion} key={clue.id} clue={clue} />
         ))}
         </>
     )

@@ -11,8 +11,8 @@ const NavBar = (props) => {
 
   return (
     <div>
-      <button onClick={props.handleLogout}>Logout</button>
-      <button onClick={props.handleDeleteUser}>Delete User</button>
+      {/* <button onClick={props.handleLogout}>Logout</button> */}
+      {/* <button onClick={props.handleDeleteUser}>Delete User</button> */}
       
       
     </div>

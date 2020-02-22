@@ -75,12 +75,12 @@ export class Game extends Component {
             
             <div>
                 <Header  textAlign='center' color='blue' size='huge'>Jeopardy</Header><br/>
-                <CluesList addPoints={this.props.addPoints} addQuestion={this.props.addQuestion} checkLoggedIn={this.props.checkLoggedIn} clues={this.props.clues} clearClues={this.props.clearClues} addPoints={this.props.addPoints} />
+                <CluesList updateUserRound={this.props.updateUserRound} addPoints={this.props.addPoints} addQuestion={this.props.addQuestion} checkLoggedIn={this.props.checkLoggedIn} clues={this.props.clues} clearClues={this.props.clearClues} addPoints={this.props.addPoints} />
                 <button onClick={this.props.getClues}>New Game</button>
-                <form onSubmit={this.handleEditUsername}>
+                {/* <form onSubmit={this.handleEditUsername}>
                 <input type="text" name="userName" placeholder='username' value={this.state.userName} onChange={this.handleEditChange} required />
                 <button type="submit">Submit</button>
-                </form>
+                </form> */}
             </div>
 
         )

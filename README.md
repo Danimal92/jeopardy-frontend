@@ -5,3 +5,4 @@ A simple trivia app that generates questions based on difficulty, type, and cate
 Built with ReactJS, react bootstrap, and ruby on rails.
 
 sdfsdf
+sdf
